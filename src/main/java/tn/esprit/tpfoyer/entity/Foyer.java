@@ -1,5 +1,6 @@
 package tn.esprit.tpfoyer.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -22,6 +23,8 @@ public class Foyer {
     @OneToOne
     Universite universite;
 
+    @JsonIgnore
+    @ToString.Exclude
     @OneToMany(cascade = CascadeType.ALL, mappedBy="foyer")
     Set<Bloc> blocs;
 

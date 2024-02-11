@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import tn.esprit.tpfoyer.entity.Foyer;
 
 @Repository
-public interface FoyerRepository extends JpaRepository<Foyer, String> {
+public interface FoyerRepository extends JpaRepository<Foyer, Long> {
 }

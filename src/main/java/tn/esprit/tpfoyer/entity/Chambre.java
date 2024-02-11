@@ -1,5 +1,6 @@
 package tn.esprit.tpfoyer.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -24,6 +25,8 @@ public class Chambre {
     @Enumerated(EnumType.STRING)
     TypeChambre typeC;
 
+    @JsonIgnore
+    @ToString.Exclude
     @OneToMany(cascade = CascadeType.ALL)
     Set<Reservation> reservation;
 

@@ -1,4 +1,4 @@
-package tn.esprit.tpfoyer.service;
+package tn.esprit.tpfoyer.service.chambre;
 
 import tn.esprit.tpfoyer.entity.Chambre;
 
